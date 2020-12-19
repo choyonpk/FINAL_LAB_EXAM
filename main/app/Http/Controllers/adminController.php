@@ -52,5 +52,17 @@ class adminController extends Controller
     
             return redirect()->route('admin.home.employeelist');
     }
+
+    public function delete($id){
+        
+        return view('admin.home.delete');
+    }
+
+    public function destroy($id){
+        if(employee::destroy($id))
+        {
+        return redirect()->route('admin.home.employeelist');
+        }
+    }
     
 }

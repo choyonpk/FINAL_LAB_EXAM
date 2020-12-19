@@ -32,7 +32,7 @@
 			<td>{{$users[$i]['pass']}}</td>
 			<td>
 				<a href="{{route('admin.home.edit', $users[$i]['id'])}}">Edit</a> |
-				<a href="/delete/{{$users[$i]['id']}}">Delete</a> 
+				<a href="{{route('admin.home.delete', $users[$i]['id'])}}">Delete</a> 
 			</td>
 		</tr>
 		@endfor
