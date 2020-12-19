@@ -25,6 +25,8 @@ Route::post('/admin/create','adminController@addemployee');
 Route::get('/admin/employeelist','adminController@employeelist')->name('admin.home.employeelist');
 
 Route::get('/admin/edit/{id}','adminController@edit')->name('admin.home.edit');
+Route::post('/admin/edit/{id}','adminController@update')->name('admin.home.edit');
+
 
 
 

@@ -40,4 +40,17 @@ class adminController extends Controller
         $users = employee::find($id)->get();
          return view('admin.home.edit')->with('users', $users[0]);
     }
+    
+    public function update($id, Request $req){
+
+            $user = employee::find($id); 
+            $user->username     = $req->uname;
+            $user->pass     = $req->pass;
+            $user->name         = $req->name;
+            $user->contact         = $req->contact;   
+            $user->save();
+    
+            return redirect()->route('admin.home.employeelist');
+    }
+    
 }

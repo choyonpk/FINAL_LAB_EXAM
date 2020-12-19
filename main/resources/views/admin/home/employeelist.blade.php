@@ -18,7 +18,9 @@
 			<td>NAME</td>
 			<td>USERNAME</td>
 			<td>Contact</td>
-			<td>password</td>
+            <td>password</td>
+			<td>action</td>
+            
 		</tr>
 
 		@for($i=0; $i < count($users); $i++)
